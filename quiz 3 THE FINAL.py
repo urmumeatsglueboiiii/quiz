@@ -20,7 +20,6 @@ wants_to_play = input ("\n A) Yes \n B) No\n \n").lower()
 
 if check(options, wants_to_play):
     print("\n Okay mate lets start! \n")
-    points += 1
 elif wants_to_play == "no" or wants_to_play == "b":
     print("\n Too bad you are doing it anyways\n")
     points -= 1
@@ -137,7 +136,7 @@ else:
 print("\n Congrats you got {} out of 11 right good job. \n".format(points))
 
 #remove one pint if user did not wanted to play
-if wants_to_play == "no":
+if wants_to_play == "no" or wants_to_play == "b" :
     print ("I took away one point because you said no to playing the quiz. IT TOOK ME AGES.")
 
 #thanking user for playing the quiz
